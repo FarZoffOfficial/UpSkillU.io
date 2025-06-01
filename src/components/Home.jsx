@@ -1,47 +1,53 @@
-import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-
 function Home() {
-  const { logout } = useAuth();
-
   return (
-    <div className="min-h-screen bg-gray-100">
-      <nav className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-800">UpSkillU.io</h1>
-            </div>
-            <div className="flex items-center">
-              <button
-                onClick={logout}
-                className="ml-4 px-4 py-2 text-sm text-red-600 hover:text-red-800"
-              >
-                Logout
-              </button>
-            </div>
-          </div>
+    <div className="max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold text-gray-900 mb-8">Salesforce AI Associate Certification Prep</h1>
+      
+      <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-8">
+        <div className="px-4 py-5 sm:px-6">
+          <h2 className="text-xl font-semibold text-gray-900">Exam Overview</h2>
+          <p className="mt-1 text-sm text-gray-500">Key information about the certification</p>
         </div>
-      </nav>
+        <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+          <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+            <div>
+              <dt className="text-sm font-medium text-gray-500">Duration</dt>
+              <dd className="mt-1 text-sm text-gray-900">90 minutes</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500">Questions</dt>
+              <dd className="mt-1 text-sm text-gray-900">60 multiple-choice</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500">Passing Score</dt>
+              <dd className="mt-1 text-sm text-gray-900">65%</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500">Format</dt>
+              <dd className="mt-1 text-sm text-gray-900">Multiple choice, online</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
 
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Welcome to UpSkillU.io</h2>
-          <div className="bg-white overflow-hidden shadow rounded-lg">
-            <div className="p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Available Resources</h3>
-              <Link
-                to="/cert-overview"
-                className="block p-4 border rounded-lg hover:bg-gray-50"
-              >
-                Salesforce AI Associate Certification Overview
-              </Link>
-            </div>
-          </div>
+      <div className="bg-white shadow sm:rounded-lg">
+        <div className="px-4 py-5 sm:px-6">
+          <h2 className="text-xl font-semibold text-gray-900">Key Topics</h2>
+          <p className="mt-1 text-sm text-gray-500">Main areas covered in the exam</p>
         </div>
-      </main>
+        <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600">
+            <li>AI Fundamentals and Ethics</li>
+            <li>Einstein Features and Capabilities</li>
+            <li>AI Cloud Solutions</li>
+            <li>Data Quality and Preparation</li>
+            <li>AI Implementation Best Practices</li>
+            <li>AI Model Evaluation and Monitoring</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Home
+export default Home;
